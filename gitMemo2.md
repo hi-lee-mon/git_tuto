@@ -74,3 +74,9 @@ git rm --cached ファイル名
 ```
 git mv 旧ファイル名 新ファイル名
 ```
+
+■gitHubにcommitをアップする
+```
+git push -p origin ブランチ名
+```
+-pは初回につけることでgit push だけでpushできるようになる。
