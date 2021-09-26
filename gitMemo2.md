@@ -80,3 +80,37 @@ git mv 旧ファイル名 新ファイル名
 git push -p origin ブランチ名
 ```
 -pは初回につけることでgit push だけでpushできるようになる。
+
+■コマンドエイリアスの使い方
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.co checkout
+
+■.gitignoreファイルの作成方法
+バージョン管理しない。つまり、githubにあげない・チームへの共有が不要なファイルを管理する方法。
+```
+#はコメントアウト
+ファイル指定、またはパスでファイルを指定する。
+正規表現も利用できる。
+※.gitignoreファイルの管理対象になった場合、git statusコマンドなどで表示されなくなる。
+```
+
+■workTreeのfileの状態をstageの状態でsaveする（ファイルの変更を取り消す）
+```
+git restore ファイル名
+```
+
+■statgeのfileの状態をリポの状態でsaveする（stageの変更を取り消す）
+```
+git restore --staged ファイル名
+```
+
+■直前のコミットをやりなおす
+```
+1. git addで再度コミットしたいファイルをstageする
+2. git commit --amendとすることで新たにコミットを作成せずに、直前のコミットを作り直す
+```
+※リモートリポジトリにpushしたコミットはやり直してはいけない。
+例えば、pushしてからHEADのコミットをやり直しているときに、別の誰かがpushされた内容を取り込みます。取り込んだあとに、修正したコミットをpushすると別の誰かのリポジトリの状態とずれが生じる
+
