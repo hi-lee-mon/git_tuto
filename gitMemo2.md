@@ -43,4 +43,34 @@ git status
 ●ステージとローカルリポジトリの比較
 indexとcommitを比較する。commitにはtreeの情報があり、treeはindexをスナップショットで記録しているため、indexの情報とtreeを突き合わせれば差分がわかる。
 
-■
+■変更内容の確認
+```
+// ワークツリー - stage
+git diff ファイル名
+// stage - ローカルリポジトリ
+git diff --staged 
+```
+git statusと同様の比較方法でファイルの内容の比較を行う。
+
+■commitの履歴確認
+```
+git log --oneline
+git log -p index.html
+git log -n コミット数
+```
+最新のコミットを辿るように表示するため、最新のコミットから表示される。つまり、一番上のログが最新。
+
+■ファイルの記録を削除
+```
+// ワークツリーとstageから削除される
+git rm ファイル名
+git rm -r ディレクトリ
+// stageから削除されワークツリーには残る
+git rm --cached ファイル名
+```
+最後はローカルリポジトリには、残っているのでcommitしてstageのスナップショットを記録する必要がある。
+
+■ファイルの移動とファイル名の変更を記録する
+```
+git mv 旧ファイル名 新ファイル名
+```
