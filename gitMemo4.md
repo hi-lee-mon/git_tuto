@@ -55,7 +55,7 @@ git merge ブランチ名
 ```
 ●Fast Foward
 ```
-枝分かれされないmerge
+枝分かれしないマージ
 ```
 ●Auto Merge
 ```
