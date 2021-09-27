@@ -1,9 +1,11 @@
 ■作業を一時避難する
+commitされていない変更がある場合ブランチの移動はできない。
+ので、git stashすることでワークツリーとstageにある変更分を
+別の場所に移動させる。
 ```
 git stash 
 git stash save // 上記と同じ
 ```
-
 ■stashを確認
 ```
 git stash list
