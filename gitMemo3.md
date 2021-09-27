@@ -47,4 +47,3 @@ git pull リモート名 ブランチ名
 ```
 git remote rename 旧 新
 ```
-
