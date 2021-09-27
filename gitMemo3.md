@@ -1,4 +1,4 @@
-conflict
+confilectsを追記
 ■ワークツリーにあるリモートリポジトリの状態を確認する
 ```
 git remote // リポジトリの確認
