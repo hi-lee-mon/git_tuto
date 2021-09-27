@@ -13,6 +13,6 @@ commitすると直前のコミットからcommitされたコミットに移動�
 
 ■HEADの中身
 ref:ブランチ名　となっているだけ
-.git/HEAD
+.git/HEAA
 .git/refs
 以下に記録がある。
