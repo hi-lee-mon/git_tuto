@@ -1,6 +1,7 @@
 ■リベース
 mergeじゃない変更の取り込み
-mergeと違って親コミットが1つになるため、履歴が整理された状態になる
+mergeと違って親コミットが1つになるため、履歴が整理された状態になる。
+rebase時に指定したコミットを取り込み、指定したコミットを親コミットとして新たなコミットを作成する。必ず指定されたコミットはfase fowardすること。
 ```
 *main
  feature
@@ -9,13 +10,14 @@ git checkout feature
 ↓
 git rebase master // featureブランチで実行
 ↓
-featureを指すコミットが削除されてreabaseでできたコミットを指すようになる。
-rebaseコミットはmasterのコミットの親コミットとして作成される。
+featureブランチが指すコミットが削除されてreabaseでできたコミットを指すようになる。
+rebaseコミットはmasterのコミットを親コミットとして作成される。
 ↓
-git checkout main
+git checkout main //mainブランチへ移動
 ↓
-git merge feature
+git merge feature //fast forwardする。
 ↓
-fast forwardする。
+リベース完
 ```
-※rebaseしたブランチの親コミットが変更されるからrebaseと呼ぶa
+※rebaseしたブランチの親コミットが変更されるからrebaseと呼ぶ。
+
