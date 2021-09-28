@@ -20,3 +20,13 @@ git stash apply --index
 // 特定のstashを復元
 git stash apply stash@{0} // 0が最新
 ```
+
+■stashの削除
+```
+//最新
+git stash drop
+//指定
+git stash drop stash@{1}
+//すべて
+git stash clear
+```
