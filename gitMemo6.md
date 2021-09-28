@@ -18,4 +18,4 @@ git merge feature
 ↓
 fast forwardする。
 ```
-※rebaseしたブランチの親コミットが変更されるからrebaseと呼ぶ
+※rebaseしたブランチの親コミットが変更されるからrebaseと呼ぶa
