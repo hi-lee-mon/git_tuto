@@ -83,12 +83,14 @@ mergeコミットファイルが普通のコミットと異なる点としては
 git fetchしたときにリモートリポジトリにあるコミットファイルをローカルにもってきて、それを指すブランチをremotes/以下に配置している。
 ```
 .git/refs/remotes
-```ｗ
-
-■リモートブランチの取り込み
 ```
-git branch main origin/main
-git checkout -b main origin/main
+
+■リモートブランチの取り込み（作成）
+```
+// 作成
+git branch main origin/mai
+// 移動も同時におこなう
+git checkout -b main origin/main //ブランチの作成と移動
 ```
 
 ■リモートブランチの削除
