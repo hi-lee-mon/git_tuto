@@ -45,9 +45,9 @@ indexとcommitを比較する。commitにはtreeの情報があり、treeはinde
 
 ■変更内容の確認
 ```
-// ワークツリー - stage
+// ワークツリー と stage
 git diff ファイル名
-// stage - ローカルリポジトリ
+// stage と ローカルリポジトリ
 git diff --staged 
 ```
 git statusと同様の比較方法でファイルの内容の比較を行う。

@@ -22,6 +22,11 @@ git remote add origin https://~
 ■リモートから情報を取得する方法（fetch）
 リモートリポジトリのデータを取ってきて、ローカルリポジトリのリモートブランチに保存する。
 ```
+// リモートにあるブランチをローカルのリモート追跡ブランチに反映指せる
+ git fetch <リモート名> <ブランチ名>
+ git fetch origin develop
+```
+```
 git fetch <リモート名>
 git fetch origin
 // 以下オプション
@@ -36,6 +41,7 @@ git branch -a
 git merge リモートブランチ
 git merge remotes/origin/main
 以下省略記法
+// 現在のブランチに取り込む
 git merge origin/main
 ```
 

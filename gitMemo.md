@@ -106,9 +106,11 @@ mkdir test
 echo "hello" > test/hello.txt
 git add test
 git commit -m "add test dir"
+
 // 最新のコミットファイル(HEAD)を確認。
-//コミットファイルにはツリーファイルの名前が書いてある
+// コミットファイルにはツリーファイルの名前が書いてある
 git cat-file -p HEAD 
+// 上記のコマンドでtreeファイル名を確認しtreeファイルの中身を確認
 git cat-file -p <Gitオブジェクト名（最新のツリーファイル名）>
 ```
 ```
